@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+
+        Hello
+
+
+        <script>
+            function isPangram(string){
+                return (string.match(/([a-z])(?!.*\1)/gi)).length===26;
+            }
+
+            isPangram("The quick brown fox jumps over the lazy dog.");
+            isPangram("This is not a pangram.");
+        </script>
+    </body>
+</html>

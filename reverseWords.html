@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+
+        Hello
+
+
+        <script>
+            function reverseWords(str) {
+                return str.split(" ").map((string)=> string.split("").reverse().join("")).join(" ");
+                
+            }
+            reverseWords('The quick brown fox jumps over the lazy dog.');
+            reverseWords('apple');
+            reverseWords('a b c d');
+            reverseWords('double  spaced  words');
+        </script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!Doctype HTML>
+<html>
+    <head>
+
+    </head>
+    <body>
+        hey
+       
+        <script>
+            A=[1,5,7,-1]
+            var Sum=6
+            Output=2
+
+            validate([1,5,7,-1],Sum);
+            function validate(a, sum){
+                var plus = sum;
+                var temp = [];
+                var count = 0;
+                for(let i = 0; i < a.length-1; i++){
+                    plusTemp = a[i] + a[i+1];
+                    temp.push(plusTemp);
+                }
+               
+                console.log(temp);
+                temp.forEach((x)=>{
+                    if(sum==x){
+                        count++;
+                    }
+                })
+                console.log(count);
+            }
+        </script>
+    </body>
+</html>
+
+        

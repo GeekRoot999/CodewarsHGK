@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+
+        Hello
+
+
+        <script>
+            var input = [1,4,4,2,4,1,2,4,1]
+
+            // Output:
+            // [1,1,1] = 3
+            // [4,4,4,4] = 16
+            // [2,2] = 4
+            // 23
+
+            function dummy(input){
+                let filteredArr=[];
+                let sumArr = [];
+                input.sort();
+                //[1,1,1,2,2,4,4,4,4]
+                
+                input.forEach((a,i)=>{
+                    if(a === input[i]){
+                    filteredArr = input.splice((input.indexOf(a)), input.lastIndexOf(a)+1) 
+                            console.log(filteredArr)
+                            console.log(filteredArr.reduce((x,y)=>{return x+y}))
+                        sumArr.push(filteredArr.reduce((x,y)=>{return x+y}))
+                    }
+                })
+
+                console.log(sumArr.reduce((a,b)=>{ return a+ b }))
+            }
+            
+
+            dummy(input);
+        </script>
+    </body>
+</html>

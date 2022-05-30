@@ -1,0 +1,73 @@
+<!Doctype HTML>
+<html>
+    <head>
+
+    </head>
+    <body>
+        Hello
+        
+        Welcome.
+
+        In this kata you are required to, given a string, replace every letter with its position in the alphabet.
+
+        If anything in the text isn't a letter, ignore it and don't return it.
+
+        "a" = 1, "b" = 2, etc.
+
+        Example
+        alphabetPosition("The sunset sets at twelve o' clock.")
+        Should return "20 8 5 19 21 14 19 5 20 19 5 20 19 1 20 20 23 5 12 22 5 15 3 12 15 3 11" ( as a string )
+        <script>
+            
+            // function alphabetPosition(text) {
+            //     var letters = text.split('');
+            //     let result =  letters.map((l) => {
+            //         let code = l.toUpperCase().charCodeAt() - 64;
+            //         if (l.length && code > 0 && code<=26){
+            //             return code;
+            //         }
+            //     })
+            //     console.log(result.join(' ').replace(/\s+/g, " ").trim());
+            //     return result.join(' ').replace(/\s+/g, " ").trim();
+            // }
+
+            // practice
+            // function alphabetPosition(text) {
+            //     let letters = text.split('').map((l)=>{
+            //         return code = l.toUpperCase().charCodeAt() - 64;
+            //         if(l.length && 0<=code<=26){
+            //             code;
+            //         }
+            //     })
+            //     console.log(letters.join(' ').replace(/\s+/g, " ").trim());
+            // }
+
+            // example 1
+            // function alphabetPosition(text) {
+            //     return text
+            //     .toUpperCase()
+            //     .match(/[a-z]/gi)
+            //     .map( (c) => c.charCodeAt() - 64)
+            //     .join(' ');
+            // }
+
+            // example 2
+            // function alphabetPosition(text) {
+            //     var result = "";
+            //     for (var i = 0; i < text.length; i++){
+            //         var code = text.toUpperCase().charCodeAt(i)
+            //         if (code > 64 && code < 91) {
+            //             result += (code - 64) + " ";
+            //         }
+            //     }
+            //     console.log(result.slice(0, result.length-1))
+            //     return result.slice(0, result.length-1);
+            // }
+
+            alphabetPosition("The sunset sets at twelve o' clock.");
+            alphabetPosition("The narwhal bacons at midnight.");
+        </script>
+    </body>
+</html>
+
+        

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+
+        Hello
+
+
+        <script>
+            // function digPow(n, p){
+            //     let string = n.toString();
+            //     let len = string.length;
+            //     let result = 0;
+            //     for(var i = 0; i < len ; i++) {
+            //         var numberser = parseInt(string.charAt(i));
+            //         result +=  Math.pow(numberser, p + i)
+            //     }
+            //     var x = Math.pow(n,p);
+            //     if(result === x){
+            //         return p;
+            //         } else if(result%n === 0) {
+            //         return result / n;
+            //     }else {
+            //         return -1  
+            //     }
+            // }
+
+            // practise 1
+            function digPow(n, p){
+                let string = n.toString();
+                let length = string.length;
+                var powresult = 0;
+                for(let i = 0; i < length; i++){
+                    let numberParse = parseInt(string.charAt(i));
+                    powresult += Math.pow(numberParse, p + i);
+                }
+                console.log(powresult);
+                var result = Math.pow(n,p);
+                return (powresult === result) ? p : (powresult%n === 0) ? (powresult / n) : -1 
+            }
+
+            // Example 1
+            // function digPow(n, p){
+            //     var str = String(n)
+            //     var res = 0;
+                
+            //     for(var i=0; i<str.length; i++){
+            //         res += Math.pow(parseInt(str[i]),p++); 
+            //     }
+                
+            //     return res%n === 0 ? res/n : -1;
+            // }
+
+            // Example 2
+            // function digPow(n, p){
+            //     const result = `${n}`.split('').reduce((sum, i) => sum += i ** p++, 0)
+            //     return result % n ? -1 : result / n
+            // }
+
+
+            digPow(89, 1)
+            digPow(92, 1)
+            digPow(46288, 3)
+        </script>
+    </body>
+</html>

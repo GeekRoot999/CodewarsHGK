@@ -1,0 +1,126 @@
+<!Doctype HTML>
+<html>
+    <head>
+
+    </head>
+    <body>
+        Hello
+        
+        Prior to having fancy iPhones, teenagers would wear out their thumbs sending SMS messages on candybar-shaped feature phones with 3x4 numeric keypads.
+
+        |     | | ABC | | DEF |
+        |  1  | |  2  | |  3  |
+        
+        | GHI | | JKL | | MNO |
+        |  4  | |  5  | |  6  |
+        
+        
+        |PQRS | | TUV | | WXYZ|
+        |  7  | |  8  | |  9  |
+        
+        |     | |space| |     |
+        |  *  | |  0  | |  #  |
+        
+
+        Prior to the development of T9 (predictive text entry) systems, the method to type words was called "multi-tap" and involved pressing a button repeatedly to cycle through the possible values.
+
+        For example, to type a letter "R" you would press the 7 key three times (as the screen display for the current character cycles through P->Q->R->S->7). A character is "locked in" once the user presses a different key or pauses for a short period of time (thus, no extra button presses are required beyond what is needed for each letter individually). The zero key handles spaces, with one press of the key producing a space and two presses producing a zero.
+
+        In order to send the message "WHERE DO U WANT 2 MEET L8R" a teen would have to actually do 47 button presses. No wonder they abbreviated.
+
+        For this assignment, write a module that can calculate the amount of button presses required for any phrase. Punctuation can be ignored for this exercise. Likewise, you can assume the phone doesn't distinguish between upper/lowercase characters (but you should allow your module to accept input in either for convenience).
+
+        Hint: While it wouldn't take too long to hard code the amount of keypresses for all 26 letters by hand, try to avoid doing so! (Imagine you work at a phone manufacturer who might be testing out different keyboard layouts, and you want to be able to test new ones rapidly.)
+
+        <script>
+            // function presses(phrase) {
+            //     var letters = phrase.toUpperCase();
+            //     let result = 0;
+            //     for(let i = 0; i < letters.length; i++){
+            //         if (letters[i] =='B' || letters[i] == 'E' || letters[i] == 'H' || letters[i] == 'K' || letters[i] == 'N' || letters[i] == 'Q' || letters[i] == 'U' || letters[i] == 'x' || letters[i] == '0'){
+            //             result += 2;
+            //         }
+            //         else if (letters[i] =='C' || letters[i] == 'F' || letters[i] == 'I' || letters[i] == 'L' || letters[i] == 'O' || letters[i] == 'R' || letters[i] == 'V' || letters[i] == 'Y' ){
+            //             result += 3;
+            //         }
+            //         else if (letters[i] =='S' || letters[i] == 'Z' || letters[i] == 2 || letters[i] == 3 || letters[i] == 4 || letters[i] == 5 || letters[i] == 6 || letters[i] == 8){
+            //             result += 4;
+            //         }
+            //         else if (letters[i] =='7' || letters[i] == '9'){
+            //             result += 5;
+            //         }
+            //         else{
+            //             result += 1;
+            //         }
+            //     }
+            //     console.log(result);
+            //     return result
+            // }
+
+            // Example 1
+            // function presses(phrase) {
+            //     var sumpress = 0;
+            //     for (var i = 0; i < phrase.length; i++)
+            //     {
+            //         switch (true)
+            //         {
+            //         case (/[1adgjmptw\s]/i.test(phrase[i])):
+            //             sumpress++;
+            //             break;
+            //         case (/[behknqux0]/i.test(phrase[i])):
+            //             sumpress += 2;
+            //             break;
+            //         case (/[cfilorvy]/i.test(phrase[i])):
+            //             sumpress += 3;
+            //             break;
+            //         case (/[sz234568]/i.test(phrase[i])):
+            //             sumpress += 4;
+            //             break;
+            //         case (/[79]/.test(phrase[i])):
+            //             sumpress += 5;
+            //             break;
+            //         default:
+            //             sumpress++;
+            //             break;
+            //         }
+            //     }
+            //     return sumpress;
+            // }
+
+            // example 2
+            function presses(phrase) {
+                var values = {'A':1,'D':1,'G':1,'J':1,'M':1,'P':1,'T':1,'W':1,'*':1,' ':1,'#':1,'1':1,'B':2,'E':2,'H':2,'K':2,'N':2,'Q':2,'U':2,'X':2,'0':2,'C':3,'F':3,'I':3,'L':3,'O':3,'R':3,'V':3,'Y':3,'S':4,'Z':4,'2':4,'3':4,'4':4,'5':4,'6':4,'8':4,'7':5,'9':5};
+                return phrase.split('').reduce(function(count, val) {
+                    console.log(val);
+                    console.log(values[val.toUpperCase()]);
+                    // console.log(count);
+                    return count + values[val.toUpperCase()];
+                }, 0);
+            }
+
+            // Example 3
+            // function presses(phrase) {
+            //     var chunks = ['1', 'ABC2', 'DEF3', 'GHI4', 'JKL5', 'MNO6', 'PQRS7', 'TUV8', 'WXYZ9', ' 0'],
+            //         phrase = phrase.toUpperCase().split(''),
+            //         total = 0;
+                
+            //     phrase.forEach(function(l) {
+            //         var key = chunks.filter(function(c) {
+            //         return c.indexOf(l) > -1;
+            //         })[0];
+            //         total += key.indexOf(l) + 1;
+            //     });
+                
+            //     return total;
+                    
+            // }
+
+
+
+            presses("LOL"); //9
+            presses("HOW R U"); //13
+        </script>
+    </body>
+</html>
+
+        

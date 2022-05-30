@@ -1,0 +1,60 @@
+
+<!Doctype HTML>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            *, *:after, *:before{
+                box-sizing: border-box;
+                margin: 0
+            }
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            .name{
+                width: 150px;
+                height: 150px;
+                background: #1f3476;
+                color: white;
+                border-radius: 150px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 48px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="name">
+            G
+        </div>
+
+
+        <script>
+            const people = [{name: 'Tesla', occ: 'Scientist'}, {name: 'Rahman', occ: 'music'}, {name: 'Einstein', occ: 'Scientist'}];
+            
+            function peoplegetnames(occupation, n){
+                console.log(people); 
+                people.forEach((occ, n)=> {
+                    console.log(occ);
+                    if(occ.occ == occupation){
+                        console.log(occ.name);
+                        return occ.name;
+                    }
+                })
+
+            }
+
+            peoplegetnames('Scientist',people);
+            // Scientist : Tesla, Einstein
+            // music: Rahman
+        </script>
+    </body>
+</html>
+
+        

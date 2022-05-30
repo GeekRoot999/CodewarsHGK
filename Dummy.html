@@ -1,0 +1,115 @@
+<!Doctype HTML>
+<html>
+    <head>
+        <style>
+        .intro {
+            background-color: yellow;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        div>p{
+            background-color: green;
+        }
+        </style>
+    </head>
+    <body>
+       Hi
+
+        <div>
+            <p>My name is Aryan.</p>
+            <p class="intro">I live in Bangalore.</p>
+            <h2>Hello</h2>
+        </div>
+
+        const data = {
+            id: 1,
+            name: "John",
+            age: 22,
+            familyDetails: {
+                fatherDeatils: {
+                    name: "peter",
+                    age: 65,
+                    employmentDetails: {
+                        company: "test company1"
+                    }
+                },
+                motherDetails: {
+                    name: "Angel",
+                    age: 65,
+                    employmentDetails: {
+                        company: "test company2"
+                    }
+                }
+            }
+        }
+
+        const newData=data
+        data.familyDetails.fatherDeatils.age=50
+        console.log(newData); // 65
+        console.log(data); // 50
+
+
+
+        <script>
+            // function validate(nums) {
+            //     const temp = [];
+            //     console.log(nums);
+            //     console.log(nums.length)
+            //     for(let i = 0; i < nums.length; i++){
+            //         console.log(nums[i]);
+            //         if(nums[i] == 0){
+            //             i++;
+            //         }
+            //         else{
+            //             temp.push(nums[i]);
+            //         }
+            //         nums = temp;
+            //         console.log(nums);
+
+            //     }
+            //     console.log(temp);
+            // }
+            validate([0,1,0,3,2]);
+            var nums = [0,1,0,3,2];
+            Output: [1,3,2,0,0]
+
+            function validate(nums){
+                console.log(nums);
+                const temp = [];
+                var count = 0;
+                nums.forEach((x) => {
+                    if(x != 0){
+                        temp.push(x);
+                    }
+                    else{
+                        count++;
+                    }
+                })
+                console.log(temp);
+            }
+
+
+
+            A=[1,5,7,-1]
+            var Sum=6
+            Output=2
+
+            validate([1,5,7,-1]);
+            function validate(a){
+                var sum = 6;
+                var temp = []
+                for(let i = 0; i <= a.length; i++){
+                    plusTemp = a[i] + a[i+1];
+                    temp.push(plusTemp);
+                }
+                console.log(temp);
+            }
+
+        </script>
+    </body>
+</html>
+
+        

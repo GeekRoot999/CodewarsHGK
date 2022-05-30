@@ -1,0 +1,53 @@
+<!Doctype HTML>
+<html>
+    <head>
+
+    </head>
+    <body>
+        Hello
+
+        <script>
+            function count (string) {  
+                var result = {}
+                if(!string.length){
+                    return result
+                }
+                else{
+                    // result["hello"] = "hi";
+                    string.split("").forEach(function (x) { 
+                        result[x] = (result[x] || 0)+ 1; 
+                    });
+                    return result;
+                }   
+            }
+
+            // function count (string) {
+            //     return string.split('').reduce(function(counts,char){
+            //         counts[char] = (counts[char]||0) + 1;
+            //         return counts;
+            //     },{});
+            // }
+
+            // function count (string) {  
+            //     return string.split("").reduce(function(obj, elem) {
+            //         if (elem in obj)
+            //         obj[elem]++;
+            //         else
+            //         obj[elem] = 1;
+            //         return obj;
+            //     }, {});
+            // }
+
+            // function count (string) {  
+            //     var obj = {};
+            //     string = string.split('').forEach(function(x){
+            //         obj[x] = obj[x] ? obj[x] + 1 : 1;
+            //     });
+            //     return obj;
+            // }
+
+            count("aba");
+            count("")
+        </script>
+    </body>
+</html>

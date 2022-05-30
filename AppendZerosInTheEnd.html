@@ -1,0 +1,40 @@
+<!Doctype HTML>
+<html>
+    <head>
+
+    </head>
+    <body>
+        Hello
+        
+
+        <script>
+        
+
+            function validate(nums){
+                console.log(nums);
+                var temp = [];
+                var zeros = []
+                nums.forEach((x) => {
+                    // if(x != 0){
+                    //     temp.push(x);
+                    // }
+                    // else{
+                    //     zeros.push(x);
+                    // }
+                    x!=0 ? temp.push(x) : zeros.push(x);
+                })
+                nums = temp;
+                console.log("helloe", nums.concat(zeros));
+                return nums.concat(zeros);
+            }
+            validate([0,1,0,3,0,2]);
+            var nums = [0,1,0,3,2];
+            Output: [1,3,2,0,0]
+
+            
+
+        </script>
+    </body>
+</html>
+
+        

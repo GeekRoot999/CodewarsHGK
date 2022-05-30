@@ -1,0 +1,142 @@
+<!Doctype HTML>
+<html>
+    <head>
+        <title>Techmojo Interview</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Techmojo interview">
+        <meta name="author" content="John Sara">
+        <meta name="keywords" content="HTML CSS Javascript">
+        <style>
+            *, *::before, *::after{
+                box-sizing: border-box;
+                margin: 0;
+                padding: 0;
+            }
+            html{
+                
+            }
+            body{
+                overflow: hidden;
+                font-size: 16px;
+                margin: 0;
+                background: #fff;
+            }
+            .container{
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+            }
+            .orange{
+                background-color: #f2b098;
+                color: #a63c34;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .blue{
+                background: #80a7f2;
+                color: #a63c34;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .green{
+                background: #c3e344;
+                color: #a63c34;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .container .orange{
+                order: 2;
+                min-height: 200px;
+            }
+
+            .container .green, .container .blue, .container .orange{
+                width: 100%;
+                margin-bottom: 10px;
+                min-height: 100px;
+            }
+            .container .blue{
+                order: 1;
+            }
+            .container .green{
+                order: 3
+            }
+            
+            /* Media Query */
+            @media (min-width: 1200px){
+                .container{
+                    flex-direction: row;
+                }
+                .container .blue{
+                    order: 2;
+                }
+                .container .orange{
+                    order: 1;
+                }
+                .container .green{
+                    order: 3
+                }
+                .container .green, .container .blue{
+                    width: 25%;
+                }
+                .container .orange{
+                    width: 50%;
+                }
+            }
+            
+            .outer-toggle{
+                width: 150px;
+                height: 50px;
+                border-radius: 75px;
+                background: #eee;
+                position: relative;
+            }
+            .inner-toggle{
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 50px;
+                height: 50px;
+                border-radius: 50px;
+                background: #a63c34;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <div class="container">
+
+                <div class="orange-text">1</div>
+                
+                <div class="blue-text">2</div>
+                
+                <div class="green-text">3</div>
+                
+            </div>
+        </div>
+        <section>
+            <div class="outer-toggle">
+                <div class="inner-toggle"></div>
+            </div>
+        </section>
+
+        <script>
+            var ot = document.querySelector('.outer-toggle');
+            var it = document.querySelector('.inner-toggle');
+            console.log(ot);
+            console.log(it);
+
+            ot.addEventListener('click', moveCircle => {
+                console.log("Hello");
+                it.style.left = "100px";
+            });
+        </script>
+    </body>
+</html>
+
+        
