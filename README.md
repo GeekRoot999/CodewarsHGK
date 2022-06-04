@@ -1,2 +1,0 @@
-# KnowledgeTransfer
-KT 
