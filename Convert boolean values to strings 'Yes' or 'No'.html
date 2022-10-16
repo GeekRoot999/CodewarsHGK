@@ -1,0 +1,34 @@
+<!Doctype HTML>
+<html>
+    <head>
+
+    </head>
+    <body>
+        Hello
+        
+        Complete the method that takes a boolean value and return a "Yes" string for true, or a "No" string for false.
+
+        <script>
+            function boolToWord( bool ){
+                return bool ? 'Yes' : 'No';
+            }
+
+            // Example 1:
+            const boolToWord = bool => bool ? 'Yes' : 'No';
+
+            // Example 2:
+            function boolToWord( bool ){
+                return ['No','Yes'][+bool];
+            }
+
+            // Example 3:
+            const boolToWord = (i) => i && 'Yes' || 'No';
+
+            boolToWord(true);
+            boolToWord(false);
+
+        </script>
+    </body>
+</html>
+
+        

@@ -1,0 +1,50 @@
+<!Doctype HTML>
+<html>
+    <head>
+
+    </head>
+    <body>
+        Hello
+        
+        Take an array and remove every second element from the array. Always keep the first element and start removing with the next element.
+
+        Example:
+        ["Keep", "Remove", "Keep", "Remove", "Keep", ...] --> ["Keep", "Keep", "Keep", ...]
+
+        None of the arrays will be empty, so you don't have to worry about that!
+
+        <script>
+            function removeEveryOther(arr){
+                return arr.filter((e, i) => i % 2 === 0);
+            }
+
+            // Example 1:
+            function removeEveryOther(arr){
+                var newArr=[];
+                for (var i = 0; i < arr.length; i+=2){
+                    newArr.push(arr[i]);
+                }
+                return newArr;
+            }
+
+            // Example 2:
+            function removeEveryOther(arr){
+                for (var i = 1; i < arr.length;i++){
+                    arr.splice(i,1);
+                }
+                return arr;
+            }
+
+            // Example 3:
+            const removeEveryOther = arr => arr.filter((_, idx) => !(idx & 1));
+
+            removeEveryOther(['Hello', 'Goodbye', 'Hello Again']);
+            removeEveryOther([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
+            removeEveryOther([[1, 2]]);
+            removeEveryOther([['Goodbye'], {'Great': 'Job'}]);
+
+        </script>
+    </body>
+</html>
+
+        

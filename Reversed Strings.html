@@ -1,0 +1,47 @@
+<!Doctype HTML>
+<html>
+    <head>
+
+    </head>
+    <body>
+        Hello
+        
+        Complete the solution so that it reverses the string passed into it.
+
+        'world'  =>  'dlrow'
+        'word'   =>  'drow'
+
+        <script>
+            function solution(str){
+                return str.split('').reverse().join('');
+            }
+            
+            // Example 1:
+            function solution(str){
+                let newString = ""
+                for(i = str.length - 1; i >= 0; i--){
+                    newString += str;
+                }
+                return newString;
+            }
+
+            // Example 2:
+            function solution(str) {
+                if (str === "")
+                    return "";
+                else
+                    return solution(str.substr(1)) + str.charAt(0);
+            }
+
+            // Example 3:
+            const solution = s => [...s].reverse().join('');
+
+            solution('world');
+            solution('hello');
+            solution('');
+            solution('h');
+        </script>
+    </body>
+</html>
+
+        
